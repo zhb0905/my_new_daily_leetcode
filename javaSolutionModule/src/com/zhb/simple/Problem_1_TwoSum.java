@@ -5,6 +5,8 @@ import org.junit.Test;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 /**
@@ -16,9 +18,11 @@ import java.util.Scanner;
  * 标签： 数组， 哈希表
  */
 public class Problem_1_TwoSum {
-    //方法一：暴力枚举
+
     private Solution solution = new Solution();
-    class Solution {
+
+    //方法一：暴力枚举,枚举C（n,2）
+/*    class Solution {
         public int[] twoSum(int[] nums, int target){
             int n = nums.length;
             for (int i = 0; i < n; i++) {
@@ -30,7 +34,22 @@ public class Problem_1_TwoSum {
             }
             return new int[0];
         }
+    }*/
+    //方法二：HashMap(必须先判断，在添加)
+    class Solution {
+        public int[] twoSum(int[] nums, int target) {
+            Map<Integer, Integer> hashMap = new HashMap<>();
+            for (int i = 0; i < nums.length; i++) {
+                if(hashMap.containsKey(target-nums[i])) {
+                    return new int[]{hashMap.get(target-nums[i]), i};
+                }
+                hashMap.put(nums[i], i);
+            }
+            return new int[0];
+        }
+
     }
+
     @Test
     public void testSolution(){
         FileInputStream fileInputStream = null;
