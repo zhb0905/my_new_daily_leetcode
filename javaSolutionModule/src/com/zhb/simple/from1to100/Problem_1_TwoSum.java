@@ -1,4 +1,4 @@
-package com.zhb.simple;
+package com.zhb.simple.from1to100;
 
 import org.junit.Test;
 
@@ -54,7 +54,7 @@ public class Problem_1_TwoSum {
     public void testSolution(){
         FileInputStream fileInputStream = null;
         try {
-            fileInputStream = new FileInputStream("src/com/zhb/simple/Problem_1_TwoSum.txt");
+            fileInputStream = new FileInputStream("src/com/zhb/simple/from1to100/Problem_1_TwoSum.txt");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }

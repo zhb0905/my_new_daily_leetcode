@@ -1,4 +1,4 @@
-package com.zhb.simple;
+package com.zhb.simple.from1to100;
 
 import org.junit.Test;
 
@@ -58,7 +58,7 @@ public class Problem_13_RomanToInt {
     public void testSolution(){
         FileInputStream fileInputStream = null;
         try {
-            fileInputStream = new FileInputStream("src/com/zhb/simple/Problem_13_RomanToInt.txt");
+            fileInputStream = new FileInputStream("src/com/zhb/simple/from1to100/Problem_13_RomanToInt.txt");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }

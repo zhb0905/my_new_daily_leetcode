@@ -1,4 +1,4 @@
-package com.zhb.simple;
+package com.zhb.simple.from1to100;
 
 /**
  * @author zhb
@@ -35,7 +35,7 @@ public class Problem_9_IsPalindrome {
     public void testSolution(){
         FileInputStream fileInputStream = null;
         try {
-            fileInputStream = new FileInputStream("src/com/zhb/simple/Problem_9_IsPalindrome.txt");
+            fileInputStream = new FileInputStream("src/com/zhb/simple/from1to100/Problem_9_IsPalindrome.txt");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
