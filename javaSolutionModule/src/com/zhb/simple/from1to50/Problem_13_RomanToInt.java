@@ -1,11 +1,9 @@
-package com.zhb.simple.from1to100;
+package com.zhb.simple.from1to50;
 
 import org.junit.Test;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;

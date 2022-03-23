@@ -1,4 +1,4 @@
-package com.zhb.simple.from1to100;
+package com.zhb.simple.from1to50;
 
 /**
  * @author zhb

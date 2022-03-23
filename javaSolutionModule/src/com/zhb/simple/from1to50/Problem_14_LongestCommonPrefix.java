@@ -1,4 +1,4 @@
-package com.zhb.simple.from1to100;
+package com.zhb.simple.from1to50;
 
 import org.junit.Test;
 
@@ -8,6 +8,11 @@ import java.util.Optional;
 /**
  * @author zhb
  * @create 2022-03-23 6:23
+ */
+
+/**
+ * 14. 最长公共前缀
+ * 标签 字符串
  */
 public class Problem_14_LongestCommonPrefix {
 
