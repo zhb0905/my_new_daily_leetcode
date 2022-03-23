@@ -16,7 +16,7 @@ package com.zhb.simple.from1to50;
  * 链接：https://leetcode-cn.com/problems/implement-strstr
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  *
- * 标签 ：
+ *
  */
 public class Problem_28_StrStr {
     class Solution {
@@ -37,3 +37,6 @@ public class Problem_28_StrStr {
         }
     }
 }
+/**
+ * 标签 ：数组 双指针
+ */
