@@ -11,6 +11,8 @@ package com.zhb.simple.from1to50;
  * 标签 ： 递归  链表
  */
 
+import com.zhb.mylocallib.ListNode;
+
 /**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -23,13 +25,7 @@ package com.zhb.simple.from1to50;
  */
 
 
-class ListNode {
-      int val;
-      ListNode next;
-      ListNode() {}
-      ListNode(int val) { this.val = val; }
-      ListNode(int val, ListNode next) { this.val = val; this.next = next; }
- }
+
 public class Problem_21_mergeTwoLists {
     class Solution {
         public ListNode mergeTwoLists(ListNode list1, ListNode list2) {//尾插
