@@ -13,7 +13,8 @@ public class Problem_26_RemoveDuplicates {
     class Solution {
         //快慢指针。 慢：左边是答案数组。快：遍历（leftBiggest:快指针左边的最大值）
         public int removeDuplicates(int[] nums) {
-
+//            int slow = 0;
+//            int
             for (int i = 0; i < nums.length; i++) {
                 //todo:快慢指针
                 ;
