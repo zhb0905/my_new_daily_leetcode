@@ -21,7 +21,7 @@ public class Problem_3_LengthOfLongestSubstring {
      *
      * debug记录：
      * 一：WRONG java.lang.StringIndexOutOfBoundsException: String index out of range: line 54
-     *          left溢出， debug: line38 -:<  +:<=
+     *          debug: left溢出 。 line38 -:<  +:<=
      * 二：AC
      */
     class Solution {
