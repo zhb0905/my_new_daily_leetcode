@@ -14,14 +14,14 @@ public class Problem_104_MaxDepth {
 
     class Solution {
         public int maxDepth(TreeNode root) {
-            return deptRecursive(root);
+            return depthRecursive(root);
         }
 
-        public int deptRecursive(TreeNode treeNode) {
+        public int depthRecursive(TreeNode treeNode) {
             if(treeNode == null ) {
                 return 0;
             }
-            return 1 + Math.max(deptRecursive(treeNode.left), deptRecursive(treeNode.right));
+            return 1 + Math.max(depthRecursive(treeNode.left), depthRecursive(treeNode.right));
 
         }
     }
