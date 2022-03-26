@@ -20,6 +20,11 @@ public class Problem_10_IsMatch {
      *    标准化 s : aaabbc -> a3b2c1
      * 二：每个 .* , 切割一次 p: p -> p1,p2,..pn
      * 三：检查p1,p2,..pn 能否按序无相交 匹配 s 子串
+     * p1,p2,..pn组合太多，不考虑。
+     *
+     */
+    /**
+     * 思路二：状态DP：isMatch[i][j] === isMatch(s.subString(0,i), p.subString(0,j))
      */
     class Solution {
         public boolean isMatch(String s, String p) {
