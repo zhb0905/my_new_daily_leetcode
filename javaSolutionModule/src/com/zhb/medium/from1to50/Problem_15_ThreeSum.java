@@ -5,7 +5,12 @@ package com.zhb.medium.from1to50;
  * @create 2022-03-25 1:11
  */
 
+import org.junit.Test;
+
+import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
+
 
 /**
  * 15. 三数之和
@@ -15,13 +20,48 @@ import java.util.List;
  */
 public class Problem_15_ThreeSum {
     /**
-     * 思路：
-     * 两层循环得到: <sum,List<num1, num2> >
-     * 一次遍历找 -sum；
+     * 思路: 排序 对撞指针
+     * debug记录: 一：AC
      */
     class Solution {
         public List<List<Integer>> threeSum(int[] nums) {
-            return null;
+            Arrays.sort(nums);
+            List<List<Integer>> ans = new LinkedList<>();
+            int key;
+            for (int first = 0; first < nums.length; first++) {
+                if(first > 0 && nums[first] == nums[first-1]) {
+                    continue;
+                }
+                int third = nums.length - 1;
+                int second = first ;
+                while (++second < third) {
+                    if(second > first+1 && nums[second] ==nums[second-1]) {
+                        continue;
+                    }
+                    while(second <= third && nums[first] + nums[second] + nums[third] > 0) {
+                        third--;
+                    }
+                    if(second >= third) {
+                        break;
+                    }
+                    if (nums[first] + nums[second] + nums[third] == 0) {
+                        List<Integer> list = new LinkedList<>();
+                        list.add(nums[first]);
+                        list.add(nums[second]);
+                        list.add(nums[third]);
+                        ans.add(list);
+                    }
+                }
+            }
+            return ans;
         }
     }
+    Solution solution = new Solution();
+    @Test
+    public void test(){
+        solution.threeSum(new int[]{-1,0,1,2,-1,-4});
+    }
 }
+/**
+ * 数组 双指针 排序
+ */
