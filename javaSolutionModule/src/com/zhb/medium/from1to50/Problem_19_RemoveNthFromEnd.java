@@ -16,10 +16,33 @@ public class Problem_19_RemoveNthFromEnd {
     /**
      * 思路：
      * 距离为 n 的双指针
+     *
+     * debug记录：一：AC
      */
     class Solution {
         public ListNode removeNthFromEnd(ListNode head, int n) {
-            return null;
+            //首指针先走 n + 1 步
+            //边界：倒数第n个是头结点
+            ListNode firstPointer = head;
+            ListNode secondpointer = head;
+            for (int i = 0; i < n; i++) {
+                firstPointer = firstPointer.next;
+            }
+            if (firstPointer == null) {
+                return head.next;
+            }
+            //第 n + 1 步
+            firstPointer = firstPointer.next;
+            while (firstPointer != null)  {
+                firstPointer = firstPointer.next;
+                secondpointer = secondpointer.next;
+            }
+            secondpointer.next = secondpointer.next.next;
+            return head;
         }
     }
 }
+
+/**
+ * 链表 双指针 栈
+ */
